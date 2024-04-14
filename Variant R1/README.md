@@ -55,17 +55,6 @@ mvn compile exec:java
 
 Finally, to run the Client:
 
-**Group A10**
-
-**Difficulty level: I am Death incarnate!**
-
-### Team Members
-
-| Number | Name              | User                             | Email                                       |
-|--------|-------------------|----------------------------------|---------------------------------------------|
-| 102664 | Pedro Sousa       | <https://github.com/pmasousa>    | <mailto:pedro.sousa.21@tecnico.ulisboa.pt>   |
-| 103091 | Pedro Curto       | <https://github.com/pedro-curto> | <mailto:pedro.a.curto@tecnico.ulisboa.pt>   |
-| 103312 | Dinis Caroço      | <https://github.com/Dinisvgc>    | <mailto:dinis.caroco@tecnico.ulisboa.pt>    |
 ```s
 cd Client
 mvn compile exec:java
