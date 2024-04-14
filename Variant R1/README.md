@@ -2,18 +2,6 @@
 
 Distributed Systems Project 2024
 
-**Group A10**
-
-**Difficulty level: I am Death incarnate!**
-
-### Team Members
-
-| Number | Name              | User                             | Email                                       |
-|--------|-------------------|----------------------------------|---------------------------------------------|
-| 102664 | Pedro Sousa       | <https://github.com/pmasousa>    | <mailto:pedro.sousa.21@tecnico.ulisboa.pt>   |
-| 103091 | Pedro Curto       | <https://github.com/pedro-curto> | <mailto:pedro.a.curto@tecnico.ulisboa.pt>   |
-| 103312 | Dinis Caroço      | <https://github.com/Dinisvgc>    | <mailto:dinis.caroco@tecnico.ulisboa.pt>    |
-
 ## Getting Started
 
 The overall system is made up of several modules. The different types of servers are located in _ServerX_ (where X denotes stage 1, 2 or 3). 
@@ -67,12 +55,35 @@ mvn compile exec:java
 
 Finally, to run the Client:
 
+**Group A10**
+
+**Difficulty level: I am Death incarnate!**
+
+### Team Members
+
+| Number | Name              | User                             | Email                                       |
+|--------|-------------------|----------------------------------|---------------------------------------------|
+| 102664 | Pedro Sousa       | <https://github.com/pmasousa>    | <mailto:pedro.sousa.21@tecnico.ulisboa.pt>   |
+| 103091 | Pedro Curto       | <https://github.com/pedro-curto> | <mailto:pedro.a.curto@tecnico.ulisboa.pt>   |
+| 103312 | Dinis Caroço      | <https://github.com/Dinisvgc>    | <mailto:dinis.caroco@tecnico.ulisboa.pt>    |
 ```s
 cd Client
 mvn compile exec:java
 ```
 
-### Testing
+Then, start running commands as you please! Example:
+
+```s
+> put <a>
+> put <b>
+> read <[ab>]
+> read <b>
+> getTupleSpacesState A
+> take <b>
+...
+```
+
+### Testing (optional)
 
 To ensure that everything is working as expected, run the tests located on the tests directory. 
 
