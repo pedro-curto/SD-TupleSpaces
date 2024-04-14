@@ -65,7 +65,7 @@ Then, start running commands as you please! Example:
 ```s
 > put <a>
 > put <b>
-> read <[ab>]
+> read <[ab]>
 > read <b>
 > getTupleSpacesState A
 > take <b>
