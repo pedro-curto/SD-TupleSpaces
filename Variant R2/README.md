@@ -2,18 +2,6 @@
 
 Distributed Systems Project 2024
 
-**Group A10**
-
-**Difficulty level: I am Death incarnate!**
-
-### Team Members
-
-| Number | Name              | User                             | Email                                       |
-|--------|-------------------|----------------------------------|---------------------------------------------|
-| 102664 | Pedro Sousa       | <https://github.com/pmasousa>    | <mailto:pedro.sousa.21@tecnico.ulisboa.pt>   |
-| 103091 | Pedro Curto       | <https://github.com/pedro-curto> | <mailto:pedro.a.curto@tecnico.ulisboa.pt>   |
-| 103312 | Dinis Caroço      | <https://github.com/Dinisvgc>    | <mailto:dinis.caroco@tecnico.ulisboa.pt>    |
-
 ## Getting Started
 
 The overall system is made up of several modules. The different types of servers are located in _ServerX_ (where X denotes stage 1, 2 or 3). 
@@ -78,7 +66,43 @@ cd Client
 mvn compile exec:java -Dexec.args="TupleSpaces 1"
 ```
 
-### Testing
+### An example
+
+Launch two clients. Client 1:
+```s
+cd Client
+mvn compile exec:java -Dexec.args="TupleSpaces 1"
+```
+
+And Client 2:
+```s
+cd Client
+mvn compile exec:java -Dexec.args="TupleSpaces 2"
+```
+
+In Client 1:
+
+```s
+> put <a>
+> put <b>
+> put <c>
+> getTupleSpacesState A // Should get [<a>, <b>, <c>]
+> setdelay A 7
+> setdelay B 7
+> take <a>
+```
+
+Immediately after the `take <a>` from Client 1, in Client 2:
+
+```s
+> take <[abc]>
+```
+
+The expected outcome is the client 2 concluding the take first, because it can acquire the majority of the locks;
+client 1 will release its minority, and eventually client 2 succeeds.
+If the take client 2 executes isn't of the tuple \<a>, client 1 will also conclude the take succesfully in sucession.
+
+### Testing (optional)
 
 To ensure that everything is working as expected, run the tests located on the tests directory. 
 
