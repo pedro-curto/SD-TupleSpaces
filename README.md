@@ -32,7 +32,8 @@ This variant replicates the TupleSpace service across three servers (A, B, and C
 Clients discover server addresses dynamically through the name server.
 #### Feature changes
 Here, put, read and take operations follow the Xu-Liskov algorithm.
-Namely, the take operation has a very interesting approach with two phases, and we recommend anyone interested to read the file in the R
+Namely, the take operation has a very interesting approach with two phases, and we recommend anyone interested to read the 
+"put-read.png" and "take.png" files in the respective directory for detailed information on the functioning of the algorithm.
 
 ### R3 Variant
 This variant employs a state machine replication approach (RME) for TupleSpace service replication. 
